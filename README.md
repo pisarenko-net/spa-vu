@@ -5,6 +5,6 @@ The goal of this project is to build a physical appliance to switch among analog
 
 With a little collection of decks and vintage Hi-Fi devices I cannot wire them once and for all because my minidsp SHD preamp does not have enough inputs. I also like the appearance of vintage 80s devices, with their physical interfaces and little spectrum analyzers. Nothing like this exists, either modern or vintage. I saw https://imgur.com/a/7NiOgrQ?nc=1 once and got inspired to build something in the same spirit.
 
-The secondary goal is learning electronics, soldering and DIY. Never done anything like this before.
+The secondary goal is education: learning electronics, soldering and DIY. Never done anything like this before.
 
 This is work in progress.
