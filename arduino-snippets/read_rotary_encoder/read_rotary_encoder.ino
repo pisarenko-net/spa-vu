@@ -1,9 +1,9 @@
 // original code is from https://learn.adafruit.com/trinket-usb-volume-knob/code
 
-#define PIN_ENCODER_A 3
-#define PIN_ENCODER_B 2
+#define PIN_ENCODER_A 36
+#define PIN_ENCODER_B 37
 // see https://www.arduino.cc/en/Reference/PortManipulation
-#define PORT_REGISTER PIND
+#define PORT_REGISTER PINA
 
 static uint8_t enc_prev_pos = 0;
 static uint8_t enc_flags    = 0;
@@ -21,6 +21,7 @@ void setup() {
   }
 
   Serial.begin(9600);
+  Serial.println("START");
 }
 
 void loop() {
@@ -31,10 +32,12 @@ void loop() {
   // read in the encoder state first
   //
   // digitalRead() is not fast enough
-  if (bit_is_clear(PORT_REGISTER, PIN_ENCODER_A)) {
+  //if (bit_is_clear(PORT_REGISTER, PIN_ENCODER_A)) {
+  if (digitalRead(PIN_ENCODER_A)) {
     enc_cur_pos |= (1 << 0);
   }
-  if (bit_is_clear(PORT_REGISTER, PIN_ENCODER_B)) {
+//  if (bit_is_clear(PORT_REGISTER, PIN_ENCODER_B)) {
+  if (digitalRead(PIN_ENCODER_B)) {
     enc_cur_pos |= (1 << 1);
   }
  
